@@ -9,6 +9,15 @@ class Api::V1::EventsController < ApplicationController
     end
   end
 
+  def index
+    events = Event.all
+    if events
+      render json: {status: 204, message: "Loaded Events", data:events}
+    else
+      render json: "Fail", status: 401
+    end
+  end
+
   private
 
 # There is a better way to solve this without using the permit!
