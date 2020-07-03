@@ -3,7 +3,8 @@ class Api::V1::EventsController < ApplicationController
   def create
     new_event = Event.new(event_params)
     if new_event.save
-      render json: "Success", status: 204
+      # render json: "Success", status: 204
+      render json: {status: 200, message: "Successful Post"}
     else
       render json: "Fail", status: 422
     end
@@ -11,8 +12,12 @@ class Api::V1::EventsController < ApplicationController
 
   def index
     events = Event.all
-    if events
-      render json: {status: 204, message: "Loaded Events", data:events}
+    today_stats = Event.today_stats
+
+    if params[:date] == "today"
+      render json: {status: 200, message: "Today's Stats", data:today_stats}
+    elsif events
+      render json: {status: 200, message: "Loaded Events", data:events}
     else
       render json: "Fail", status: 401
     end
