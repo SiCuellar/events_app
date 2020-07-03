@@ -111,7 +111,7 @@ Development: The App is fully Testing using Rspec
 
 Produciton: run the following Curl command
 ```
-curl -X POST --header 'Content-Type: application/json' --data '{"event" : {"name" : "test button", "event_type" : "click", "at" : "2020-06-12T00:00:01", "button_color" : "red" }}' 'https://quiet-cove-11984.herokuapp.com/events'
+curl -X POST --header 'Content-Type: application/json' --data '{"event" : {"name" : "test button", "event_type" : "click", "at" : "2020-06-12T00:00:01", "button_color" : "red" }}' 'https://quiet-cove-11984.herokuapp.com/api/v1/events'
 
 ```
 
