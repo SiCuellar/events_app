@@ -4,7 +4,9 @@
 Events App is a Rails API challenge given by CR. :hospital:  
 
 
-Deployment URL: https://quiet-cove-11984.herokuapp.com/
+Deployment URL: https://quiet-cove-11984.herokuapp.com/api/v1/events
+
+PostMan for the win!
 
 ![](https://media.giphy.com/media/RRerwvHrb0nxm/giphy.gif)
 
