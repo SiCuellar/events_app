@@ -13,5 +13,7 @@ test:
   database: events_app_test
 
 production:
-  url: <%= ENV['DATABASE_URL'] %>
-  pool: <%= ENV['DATABASE_POOL_SIZE'] || 10 %>
+  <<: *defualt
+  database: events_app_production
+  username: events_app
+  password: <%= ENV['EVENTS_APP_DATABASE_PASSWORD'] %>
